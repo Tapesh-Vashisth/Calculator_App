@@ -1,0 +1,271 @@
+:root{
+    /* Theme 1 */
+    /* Backgrounds */
+
+    --Very_dark_desaturated_blue /*(main background)*/: hsl(222, 26%, 31%);
+    --Very_dark_desaturated_blue /*(toggle background, keypad background)*/: hsl(223, 31%, 20%);
+    --Very_dark_desaturated_blue /*(screen background)*/: hsl(224, 36%, 15%);
+
+    /* Keys */
+
+    --Desaturated_dark_blue /*(key background)*/: hsl(225, 21%, 49%);
+    --Desaturated_dark_blue /*(key shadow)*/: hsl(224, 28%, 35%);
+
+    --Red /*(key background, toggle)*/: hsl(6, 63%, 50%);
+    --Dark_red /*(key shadow)*/: hsl(6, 70%, 34%);
+
+    --Light_grayish_orange /*(key background)*/: hsl(30, 25%, 89%);
+    --Grayish_orange /*(key shadow)*/: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --Very_dark_grayish_blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0, 100%);
+
+    /* Theme 2 */
+
+    /* Backgrounds */
+
+    --Light_gray /*(main background)*/: hsl(0, 0%, 90%);
+    --Grayish_red /*(toggle background, keypad background)*/: hsl(0, 5%, 81%);
+    --Very_light_gray /*(screen background)*/: hsl(0, 0%, 93%);
+
+    /* Keys */
+
+    --Dark_moderate_cyan /*(key background)*/: hsl(185, 42%, 37%);
+    --Very_dark_cyan /*(key shadow)*/: hsl(185, 58%, 25%);
+
+    --Orange /*(key background, toggle)*/: hsl(25, 98%, 40%);
+    --Dark_orange /*(key shadow)*/: hsl(25, 99%, 27%);
+
+    --Light_grayish_yellow /*(key background)*/: hsl(45, 7%, 89%);
+    --Dark_grayish_orange /*(key shadow)*/: hsl(35, 11%, 61%);
+
+    /* Text */
+
+    --Very_dark_grayish_yellow: hsl(60, 10%, 19%);
+    --White /*(text)*/: hsl(0, 0, 100%);
+
+    /* Theme 3 */
+
+    /* Backgrounds */
+
+    --Very_dark_violet /*(main background)*/: hsl(268, 75%, 9%);
+    --Very_dark_violet /*(toggle background, keypad background, screen background)*/: hsl(268, 71%, 12%);
+
+    /* Keys */
+
+    --Dark_violet /*(key background)*/: hsl(281, 89%, 26%);
+    --Vivid_magenta /*(key shadow)*/: hsl(285, 91%, 52%);
+
+    --Pure_cyan /*(key background, toggle)*/: hsl(176, 100%, 44%);
+    --Soft_cyan /*(key shadow)*/: hsl(177, 92%, 70%);
+
+    --Very_dark_violet /*(key background)*/: hsl(268, 47%, 21%);
+    --Dark_magenta /*(key shadow)*/: hsl(290, 70%, 36%);
+
+    /* Text */
+
+    --Light_yellow: hsl(52, 100%, 62%);
+    --Very_dark_blue: hsl(198, 20%, 13%);
+    --White /*(text)*/: hsl(0, 0, 100%);
+
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 5fr;
+    width: 360px;
+}
+
+.value{
+    position: relative;
+    height: 80%;
+    border-radius: 10px;
+    background-color: grey;
+}
+
+.value h1{
+    padding-top: 10px;
+    max-width: 360px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#cursor{
+    position: absolute;
+    height: 42%;
+    top: 50%;
+    right: 8px;
+    border: 1px solid black;
+    transform: translateY(-50%);
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.controls{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.controls :nth-child(18){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.controls :nth-child(17){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.buttons{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h4{
+    font-size: 24px;
+}
+
+.buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 32px;
+}
+
+button{
+    display: block;
+    width: 100%;
+}
+
+.header{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modes{
+    font-size: 10px;
+    column-gap: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.btn-changer{
+    display: grid;
+    height: 20px;
+    align-items: center;
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn{
+    border: none;
+    justify-self: center;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+}
+
+.theme{
+    display: grid;
+    align-items: center;
+    text-align: right;
+}
+
+
+@media screen and (max-width: 400px){ 
+    .container{
+        justify-self: center;
+        width: 90%;
+    }
+
+    .buttons button{
+        font-size: 20px;
+    }
+
+    /* #cursor{
+        right: 12px;
+    } */
+    
+    
+    .value h1{
+        font-size: 20px;
+        max-width: 87vw;
+        overflow-y: hidden;
+        overflow-x: auto;
+        text-align: right;
+    }
+}
+
+.hover:hover{
+    opacity: 0.7;
+}
+
+/* scroll bars  */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(139, 119, 152);    
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2950e9; 
+}
+
+
+
+
+

@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,12 +18,59 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="header">
+      <div class="title">
+        <h4>calc</h4>
+      </div>
+      <div class="modes">
+        <p class="theme">THEME</p>
+        <div class="changer">
+          <div class="numbers">
+            <p id="1">1</p>
+            <p id="2">2</p>
+            <p id="3">3</p>
+          </div>
+          <div class="btn-changer">
+            <button class="btn hover" id="1"></button>
+            <button class="btn hover" id="2"></button>
+            <button class="btn hover" id="3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="value">
+      <h1></h1>
+      <div id="cursor"></div>
+    </div>
+    <div class="controls">
+      <div class="buttons hover"><button id="7">7</button></div>
+      <div class="buttons hover"><button id="8">8</button></div>
+      <div class="buttons hover"><button id="9">9</button></div>
+      <div class="buttons hover"><button id="DEL">DEL</button></div>
+      <div class="buttons hover"><button id="4">4</button></div>
+      <div class="buttons hover"><button id="5">5</button></div>
+      <div class="buttons hover"><button id="6">6</button></div>
+      <div class="buttons hover"><button id="+">+</button></div>
+      <div class="buttons hover"><button id="1">1</button></div>
+      <div class="buttons hover"><button id="2">2</button></div>
+      <div class="buttons hover"><button id="3">3</button></div>
+      <div class="buttons hover"><button id="-">-</button></div>
+      <div class="buttons hover"><button id=".">.</button></div>
+      <div class="buttons hover"><button id="0">0</button></div>
+      <div class="buttons hover"><button id="/">/</button></div>
+      <div class="buttons hover"><button id="*">x</button></div>
+      <div class="buttons hover"><button id="reset">RESET</button></div>
+      <div class="buttons hover" id="equal"><button id="=">=</button></div>
+    </div>
+  </div>
 
-
-  
-  <div class="attribution">
+  <script src="./script.js"></script>  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
+
+
