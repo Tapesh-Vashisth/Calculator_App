@@ -162,7 +162,7 @@ numbers[0].addEventListener("click", function(e){
                 result.textContent = "";
                 equation = "";
                 break;
-                case "=":
+            case "=":
             evaluate(equation);
             break;
         case "DEL":
@@ -276,6 +276,7 @@ numbers[0].addEventListener("click", function(e){
 
 
 // evaluation of equation 
-function evaluate(equation){
-    result.textContent = eval(equation).toLocaleString();
+function evaluate(eq){
+    result.textContent = eval(eq).toLocaleString();
+    equation = eval(eq);
 }
